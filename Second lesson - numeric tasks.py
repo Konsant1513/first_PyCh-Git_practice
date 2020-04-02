@@ -1,6 +1,7 @@
 # Задачи на циклы и оператор условия
 # Test-selector included
-test_task = int(input("Enter a number of task to check"))
+
+test_task = int(input("Enter a number of task to check\n"))
 if test_task == 1:
     '''
     Задача 1
@@ -66,7 +67,7 @@ elif test_task == 6:
     int_sum1 = int(0)
     source_int2 = int(input("Enter a number"))
     while source_int2 > 0:
-        int_sum1 = int_sum1 + source_int2 % 10
+        int_sum1 = int_sum1 + (source_int2 % 10)
         source_int2 = source_int2 // 10
     print(int_sum1)
 
@@ -76,12 +77,10 @@ elif test_task == 7:
     Найти произведение цифр числа.
     '''
     int_mpl1 = int(1)
-    source_int2 = int(input("Enter a number"))
-    while source_int2 > 0:
-        int_mpl1 = int_mpl1 * source_int2 % 10
-        source_int2 = source_int2 // 10
-    else:
-        print("Nothing to multiply, base value is ", end="")
+    source_int6 = int(input("Enter a number"))
+    while source_int6 > 0:
+        int_mpl1 = int_mpl1 * (source_int6 % 10)
+        source_int6 = source_int6 // 10
     print(int_mpl1)
 
 elif test_task == 8:
@@ -90,14 +89,16 @@ elif test_task == 8:
     Дать ответ на вопрос: есть ли среди цифр числа 5?
     '''
     source_int3 = int(input("Enter a number"))
+    found = False
     while source_int3 > 0:
         if source_int3 % 10 == 5:
-            print("There is a '5' number")
+            found = True
             break
         source_int3 = source_int3 // 10
+    if found == True:
+        print("There is a '5' number")
     else:
-        print("nothing to do here. ", end="")
-    print("No number '5' found")
+        print("No number '5' found")
 
 elif test_task == 9:
     '''
@@ -107,11 +108,9 @@ elif test_task == 9:
     max_int1 = int(0)
     source_int4 = int(input("Enter a number"))
     while source_int4 > 0:
-        if max_int1 < source_int4 % 10
+        if max_int1 < source_int4 % 10:
             max_int1 = source_int4 % 10
         source_int4 = source_int4 // 10
-    else:
-        print("nothing to do here. ", end="")
     print(max_int1)
 
 elif test_task == 10:
@@ -125,9 +124,7 @@ elif test_task == 10:
         if source_int5 % 10 == 5:
             int_count1 += 1
         source_int5 = source_int5 // 10
-    else:
-        print("nothing to do here. ", end="")
-    print(source_int5)
+    print(int_count1)
 
 else:
     print("No such task number. Please relaunch.")
